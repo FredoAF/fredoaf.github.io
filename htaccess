@@ -1,4 +1,0 @@
-RewriteEngine On
-        RewriteBase /
-        RewriteCond %{HTTP_HOST} !http://alexfarren.co.uk.s3-website-eu-west-1.amazonaws.com$ [NC]
-        RewriteRule ^(.*)$ http://alexfarren.co.uk/$1 [L,R=301]
