@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Alex Farren &middot Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AlexFarren.co.uk">
+    <meta name="author" content="Alex Farren">
+    <link rel="icon" href="./img/ex9.png" type="image/x-icon">
+	<link rel="shortcut icon" href="./img/ex9.png" type="image/x-icon">
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+	html{
+		overflow-y: scroll;
+	}
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+	  #rightFooter{
+		float: right;
+		position:absolute;
+		bottom:0;
+		right:0;
+	  }
+	  #leftFooter{
+		float: left;
+		position:absolute;
+		bottom:0;
+		left:0;
+	  }
+	  .footer{
+		height:40px;
+		position:relative;
+	  }
+
+    </style>
+    <link href="./css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-36604166-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+  <div class=”postmetadata”>
+    Posted on <span class=”updated”>May 2, 2016</span>
+  </div>
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+
+
+  <!--This is my header-->
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="./index.html">Home</a></li>
+          <li class="active"><a href="./blog.html">Blog</a></li>
+        </ul>
+        <img src="./img/AF2.png" alt="AFLogo" width="75" height="75" border="0" style="float:top"/>
+        <h3 hidden class="muted">AlexFarren.co.uk</h3>
+      </div>
+
+      <div class="blog-header">
+        <h1 class="blog-title">Technical Thoughts..</h1>
+
+        <p class="lead blog-description">Musings of a technophile</p>
+      </div>
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          <div class="blog-post">
+            <h2 class="blog-post-title"><a href="./xbox.html">My Xbox Drank a Pint of Water and Lived to Tell the Tale</a></h2>
+
+
+            <hr>
+            <br>
+          </div><!-- /.blog-post -->
+
+
+          <div class="blog-post">
+            <h2 class="blog-post-title">DevOps Days - London 2016</h2>
+          
+            <br>
+            <img src="./img/DOD1.jpg">
+            <p>On the 19th-20th April 2016 I was lucky enough to attend the DevOps Days conference in London, representing&nbsp;<a href="http://www.hpe.com">Hewlett Packard Enterprise</a>.</p>
+            <p>DevOps, as a culture, is becoming far more widespread. At this event, there were far more corporate bodies in attendance than in previous years. More and more companies are hearing of this movement and want to buy DevOps in an <em>Out-Of-The-Box</em> solution. To counter this, the conference reiterated over and over that DevOps is a culture. Indeed there are many tools available that have been created to help facilitate this culture, but they need to be used correctly to be effective.</p>
+            <blockquote>
+              <p>DevOps - A Cultural and Professional Movement</p>
+            </blockquote>
+            <p>The event was attended by many companies including <a href="http://www.hpe.com/">HPE</a>, Microsoft, Google, Chef, Docker, Puppet. Some of these companies were giving talks, whilst others had stands where they would tell you about their new and existing products, as well as giving you a free T-Shirt..</p>
+            <p>There are a couple of concepts that I took away from this event:</p>
+            <h4>Team Structure</h4>
+            <p>Microsoft and Google both had a talk on Multi-disciplinary teams. The idea behind this is that instead of having pools of Developers, Operations guys and Testers, where these resources would be assigned to projects but work within their pools, you would instead have feature teams. These teams comprise of Devs, Ops &amp; Test guys (or whatever resources you usually combine, Wintel, DB engineer etc) working in the same team. Projects are then assigned to that team, and worked on by all members of the team. Teams work on multiple projects to avoid idle time. This works well with the concept of Microservices, where large applications are broken down into smaller services that join together to create the larger application.</p>
+            <p>Ideally these feature teams would be working in the same room. With IT distributed the way it is, with Best-Shore resources forming a large part of Enterprise workforces, channel based chat tools such as Slack or HipChat can be useful for getting teams to work well together.</p>
+            <h4>Containerisation</h4>
+            <p>Over the past 5 years Docker has become more and more popular. For the few that don't know, Docker is an implementation of containerisation. Containers work predominantly on Linux and Unix platforms, and are a smaller and more agile alternative to virtualisation. In a VM you have an entire virtual OS running ontop of the Host OS. With Containers, you only have a new instance of the system files, which link into the same Kernel as the host. This allows the user to create small, separate machines ontop of the host that are completely isolated very quickly. &nbsp;</p>
+            <p><a href="https://dcos.io/">DCOS</a> is using Apache Mesos to schedule many containers on a large host, completely removing the virtualisation layer and getting peak performance out of the hardware, while still retaining isolated environments for development.</p>
+            <p>Another reason why containers are popular, is sharing and reuse. You can share a Docker image you have created yourself which when ran by another user, will present them with the exact environment you had been using, reducing the <em>it works on my machine</em> complaint. You can also share a DockerFile, which contains instructions that are applied to a common base image (such as Ubuntu). When the end user runs this, Docker uses the base image and applies the configuration instructions to setup the image to the desired state.</p>
+            <h4>Minimal Viable Product</h4>
+            <p>Traditionally if you are building a car, you build the chassis, then add the engine, then put on the bodywork and you end up with a car. The problem with this is method is until the last step, you cannot use what you&rsquo;ve made so far.</p>
+            <p>If you are working to a Minimal Viable Product you might first create a skateboard; it has wheels which you can reuse and a base. Then you might make a bike, then a motorbike and finally a car. A skateboard definitely isn&rsquo;t what you wanted, but it has reusable parts and it&rsquo;s a mode of transport that you can use to some extent while working toward the final product.</p>
+            <h4>Quotes</h4>
+            <p>There were many quotes flying around over the event, these are my favourites</p>
+            <blockquote>
+              <p>you have to change, if you don't, you'll die - Joanne Molesky</p>
+            </blockquote>
+            <blockquote>
+              <p>People ask for things they don't use. Turn things off and see if people complain - unknown</p>
+            </blockquote>
+            <blockquote>
+              <p>Don't let experience be your blind spot - John Clapham</p>
+            </blockquote>
+            <h4>Links</h4>
+            <p><a href="http://www.devopsdays.org/events/2016-london/program/">DevOps Days Programme</a>&nbsp;- This is the full lineup of the talks, clicking the links on this page links you to most of the presentations</p>
+            <p><a href="https://vimeo.com/devopsdaysldn16">DevOps Days Video Replays</a>&nbsp;- A lot of the videos were recorded and have been uploaded here</p>
+            <p><a href="https://www.amazon.co.uk/Phoenix-Project-DevOps-Helping-Business-ebook/dp/B00AZRBLHO">The Phoenix Project</a>&nbsp;- Gene Kim was signing copies of this book at the HPE stand, if you haven't read it, its probably the place to start</p>
+            <img src="./img/DOD2.jpg" width="150" height="200">
+
+
+
+          </div><!-- /.blog-post -->
+          <br>
+          <!-- New Blog Post Here!! -->
+
+        </div><!-- /.blog-main -->
+      </div><!-- /.row -->
+      <hr>
+      <div class="footer">
+        <div id="leftFooter">
+          &copy Alex Farren 2012-2017
+        </div>
+        <div id="rightFooter">
+          <a target="_blank" href="http://linkedin.com/in/alexfarren"><img class="linkedImg" src="./img/linkedin.png" alt="LinkedIn profile" width="35" height="35" border="0" style="float:right"/></a>
+        </div>
+      </div>
+    </div> <!-- /container -->
+  <script src="./js/jquery.js"></script>
+  <script src="./js/bootstrap.js"></script>
+  </body>
+  </html>
