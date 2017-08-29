@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Boehm & Turner Home Ground Chart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AlexFarren.co.uk">
+    <meta name="author" content="Alex Farren">
+    <link rel="icon" href="./img/ex9.png" type="image/x-icon">
+	<link rel="shortcut icon" href="./img/ex9.png" type="image/x-icon">
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<script src="./js/jquery.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+	<script src="http://code.highcharts.com/highcharts-more.js"></script>
+	<script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <style type="text/css">
+	html{
+		overflow-y: scroll;
+	}
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+	  #rightFooter{
+		float: right;
+		position:absolute;
+		bottom:0;
+		right:0;
+	  }
+	  #leftFooter{
+		float: left;
+		position:absolute;
+		bottom:0;
+		left:0;
+	  }
+	  .footer{
+		height:40px;
+		position:relative;
+	  }
+	  #leftText{
+	  	float: left;
+	  }
+	  #rightText{
+	  	float: right;
+	  }
+	  .myslider{
+	  	clear: both;
+	  }
+    </style>
+    <link href="./css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  <script type="text/javascript">
+
+	 $(document).ready(function() {
+		$('#sliderPersonnel').slider({max:100,change: function( event, ui ) {createChart();}})
+		$('#sliderDynamism').slider({max:100,change: function( event, ui ) {createChart();}})
+		$('#sliderCulture').slider({max:100,change: function( event, ui ) {createChart();}})
+		$('#sliderStaff').slider({max:100,change: function( event, ui ) {createChart();}})
+		$('#sliderCriticality').slider({max:100,change: function( event, ui ) {createChart();}})
+		createChart()
+	});
+	 </script>
+	 <script>
+	 function createChart() {
+		$(function () {
+			var personnelVal = 100-$('#sliderPersonnel').slider("option", "value");
+			var dynamismVal = 100-$('#sliderDynamism').slider("option", "value");
+			var cultureVal = 100-$('#sliderCulture').slider("option", "value");
+			var staffVal = $('#sliderStaff').slider("option", "value");
+			var criticalityVal = $('#sliderCriticality').slider("option", "value");
+			var total = personnelVal+dynamismVal+cultureVal+staffVal+criticalityVal;
+			if (total<250){
+				document.getElementById('resultText').innerHTML = 'Development method should be AGILE';
+			}else{
+				document.getElementById('resultText').innerHTML = 'Development method should be PLAN-DRIVEN';
+			}
+			$('#polarChart').highcharts({
+				chart: {
+					polar: true,
+					type: 'line'
+				},
+
+				title: {
+					text: 'Boehm & Turner Home Ground Plot'
+				},
+
+				pane: {
+					size: '80%'
+				},
+
+				xAxis: {
+					categories: ['Personnel Level', 'Dynamism', 'Culture', 'Number of Staff', 'Criticality'],
+					tickmarkPlacement: 'on',
+					lineWidth: 0
+				},
+
+				yAxis: {
+					gridLineInterpolation: 'polygon',
+					lineWidth: 0,
+					min: 0,
+					max: 100,
+					labels:
+					{
+						enabled: false
+					}
+				},
+
+				tooltip: {
+					shared: true,
+					pointFormat: '<span style="color:{series.color}">{point.y:,.0f}%</b><br/>'
+				},
+
+				series: [{
+					name: 'Result',
+					data:[personnelVal,dynamismVal,cultureVal,staffVal,criticalityVal],
+					pointPlacement: 'on'
+				}]
+
+			});
+		});
+	}
+	 </script>
+
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-36604166-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+  </head>
+
+  <body>
+    <div class="container-narrow">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+        </ul>
+        <img src="./img/AF2.png" alt="AFLogo" width="75" height="75" border="0" style="float:top"/>
+        <h3 hidden class="muted">AlexFarren.co.uk</h3>
+      </div>
+
+
+      	<!-- Copyright Boehm & Turner for theory-->
+		<p class="lead">Boehm & Turner: Balancing Agile with Plan Driven</p>
+		<p>According to Boehm & Turner, there are some key characteristics that determine the development style.</p>
+		<p>This tool can be used to generate their polar chart which illustrates which method should be chosen.</p>
+		<p>If the values are close to the centre, then an Agile approach should be used. If the values are close the perimeter than a plan driven approach would be best suited.</p>
+		  <div class="control-group">
+			<h4>Personnel Level</h4>
+			<div class="controls">
+			  <div id="leftText">Mostly Level 1B</div>
+			  <div id="rightText">Mostly Level 2&3</div>
+			  <div id="sliderPersonnel" class="myslider"></div>
+			</div>
+		  </div>
+		  <div class="control-group">
+			<h4>Percentage of Requirements that Change per Month</h4>
+			<div class="controls">
+			  <div id="leftText">0%</div>
+			  <div id="rightText">50%</div>
+			  <div id="sliderDynamism" class="myslider"></div>
+			</div>
+		  </div>
+		  <div class="control-group">
+			<h4>Culture</h4>
+			<div class="controls">
+			  <div id="leftText">More Ordered</div>
+			  <div id="rightText">More Chaotic</div>
+			  <div id="sliderCulture" class="myslider"></div>
+			</div>
+		  </div>
+		  <div class="control-group">
+			<h4>Number of Staff</h4>
+			<div class="controls">
+			  <div id="leftText">0</div>
+			  <div id="rightText">300</div>
+			  <div id="sliderStaff" class="myslider"></div>
+			</div>
+		  </div>
+		  <div class="control-group">
+			<h4>Criticality if Defect Occurs</h4>
+			<div class="controls">
+			  <div id="leftText">Extremely Low</div>
+			  <div id="rightText">Extremely High</div>
+			  <div id="sliderCriticality" class="myslider"></div>
+			</div>
+		  </div>
+		  <hr>
+		  <h4 id="resultText"></h4>
+		 <div id="polarChart" style="width: 700px; height: 400px; margin: 0 auto;"></div>
+
+
+      <hr>
+      <div class="footer">
+		<div id="leftFooter">
+			&copy Alex Farren 2012-2017
+		</div>
+		<div id="rightFooter">
+			<a href="http://uk.linkedin.com/pub/alex-farren/5a/242/b27"><img class="linkedImg" src="./img/linkedin.png" alt="LinkedIn profile" width="35" height="35" border="0" style="float:right"/></a>
+		</div>
+	  </div>
+    </div> <!-- /container -->
+    <script src="./js/bootstrap.js"></script>
+  </body>
+</html>
